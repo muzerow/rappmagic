@@ -9,7 +9,5 @@
 
 am_auth <- function(name, password) {
   token <- base64(paste0(name, ":", password))
-
-  auth_token <- paste("Basic", token)
-  return(auth_token)
+  paste("Basic", token)
 }

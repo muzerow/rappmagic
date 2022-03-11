@@ -18,6 +18,5 @@ am_get_apps_info <- function(store, store_application_id, signature) {
     stop(paste0("Error code ", apps_info$status_code, ": ", content(apps_info)$message))
   }
 
-  apps_info <- content(apps_info)
-  return(apps_info)
+  content(apps_info)
 }

@@ -22,6 +22,5 @@ am_top_ltv <- function(tag_id = NULL, store, limit = NULL, country, signature) {
     stop(paste0("Error code ", top_ltv$status_code, ": ", content(top_ltv)$message))
   }
 
-  top_ltv <- content(top_ltv)
-  return(top_ltv)
+  content(top_ltv)
 }

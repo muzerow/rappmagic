@@ -15,6 +15,5 @@ am_categories <- function(signature) {
     stop(paste0("Error code ", categories$status_code, ": ", content(categories)$message))
   }
 
-  categories <- content(categories)
-  return(categories)
+  content(categories)
 }

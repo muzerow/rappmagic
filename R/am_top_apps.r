@@ -31,6 +31,5 @@ am_top_apps <- function(aggregation = NULL, sort, store, country, category_id = 
     stop(paste0("Error code ", top_apps$status_code, ": ", content(top_apps)$message))
   }
 
-  top_apps <- content(top_apps)
-  return(top_apps)
+  content(top_apps)
 }

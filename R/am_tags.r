@@ -15,6 +15,5 @@ am_tags <- function(signature) {
     stop(paste0("Error code ", tags$status_code, ": ", content(tags)$message))
   }
 
-  tags <- content(tags)
-  return(tags)
+  content(tags)
 }

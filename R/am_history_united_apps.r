@@ -27,6 +27,5 @@ am_history_united_apps <- function(aggregation = NULL, date_from = NULL, date_to
     stop(paste0("Error code ", history_united_apps$status_code, ": ", content(history_united_apps)$message))
   }
 
-  history_united_apps <- content(history_united_apps)
-  return(history_united_apps)
+  content(history_united_apps)
 }

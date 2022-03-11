@@ -18,6 +18,5 @@ am_get_united_apps_ids <- function(ids, signature) {
     stop(paste0("Error code ", united_apps_info$status_code, ": ", content(united_apps_info)$message))
   }
 
-  united_apps_info <- content(united_apps_info)
-  return(united_apps_info)
+  content(united_apps_info)
 }

@@ -14,6 +14,8 @@ am_top_ltv(tag_id = NULL, store, limit = NULL, country, signature)
 \item{limit}{The number of returned items}
 
 \item{country}{Alpha-2 country code}
+
+\item{signature}{Authentication token}
 }
 \description{
 Get Top LTV

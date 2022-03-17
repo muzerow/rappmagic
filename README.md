@@ -26,6 +26,7 @@ A Wrapper for AppMagic API
 
 * `am_top_apps()` - Get Top Applications
 * `am_top_ltv()` - Get Top LTV
+* `am_top_soft_launches()` - Get Top Soft Launches
 * `am_top_trending()` - Get Top Trending Applications
 * `am_top_united_apps()` - Get Top United Applications
 

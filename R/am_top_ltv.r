@@ -6,6 +6,7 @@
 #' @param store Store code
 #' @param limit The number of returned items
 #' @param country Alpha-2 country code
+#' @param signature Authentication token
 #'
 #' @export
 

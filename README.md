@@ -30,6 +30,10 @@ A Wrapper for AppMagic API
 * `am_top_trending()` - Get Top Trending Applications
 * `am_top_united_apps()` - Get Top United Applications
 
+## Technical
+
+* `am_list_to_table()` - Transform list into table
+
 ### Author
 
 Kirill Mukhin, Analyst at [Geeky House](https://geeky.house/)

@@ -22,7 +22,7 @@
 am_advanced_search <- function(release_date_gte, release_date_lte, country, store, size, screenshots = NULL,
                                search = NULL, description = NULL, sort, sort_asc = NULL, category_ids = NULL,
                                tag_id = NULL, publisher_place = NULL, signature) {
-  advanced_search <- GET("http://api.appmagic.rocks/v1/tops/advanced-search",
+  advanced_search <- GET("https://api.appmagic.rocks/v1/tops/advanced-search",
                          query = list(release_date_gte = release_date_gte,
                                       release_date_lte = release_date_lte,
                                       country = country,

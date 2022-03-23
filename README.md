@@ -24,7 +24,7 @@ A Wrapper for AppMagic API
 
 ## Tops
 
-* `am_advanced_search` - Get Advanced Search
+* `am_advanced_search()` - Get Advanced Search
 * `am_top_apps()` - Get Top Applications
 * `am_top_ltv()` - Get Top LTV
 * `am_top_soft_launches()` - Get Top Soft Launches

@@ -11,11 +11,11 @@ am_apps_ads(
   dateTo,
   sort,
   aggregation,
-  count,
+  count = NULL,
   offset,
-  adNetwork,
-  platform,
-  type,
+  adNetwork = NULL,
+  platform = NULL,
+  type = NULL,
   signature
 )
 }

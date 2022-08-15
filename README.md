@@ -11,11 +11,11 @@ A Wrapper for AppMagic API
 
 ## Applications
 
-* `am_get_apps_info()` - Get Application Info by Store Application ID
+* `am_apps_info()` - Get Application Info by Store Application ID
 
 ## United Applications
 
-* `am_get_united_apps_ids()` - Get United Applications Info by United Applications IDs
+* `am_united_apps_ids()` - Get United Applications Info by United Applications IDs
 
 ## History
 

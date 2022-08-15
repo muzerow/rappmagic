@@ -7,7 +7,7 @@
 #'
 #' @export
 
-am_get_united_apps_ids <- function(ids, signature) {
+am_united_apps_ids <- function(ids, signature) {
   united_apps_info <- POST("https://api.appmagic.rocks/v1/united-applications/search-by-ids",
                            body = as.list(ids),
                            encode = "json",

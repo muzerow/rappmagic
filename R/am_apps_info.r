@@ -1,6 +1,6 @@
 #' Get Application Info by Store Application ID
 #' @description Get Application Info by Store Application ID
-#' @importFrom httr add_headers content POST
+#' @importFrom httr add_headers content GET
 #' @importFrom glue glue
 #'
 #' @param store Store code

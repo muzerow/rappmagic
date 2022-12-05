@@ -43,10 +43,14 @@ A Wrapper for AppMagic API
 
 * `am_apps_ads()` - Get Application Ads
 
+## Ad Intelligence
+
+* `am_contacts_companies()` - Get LinkedIn Companies from United Publisher ID
+
 ## Technical
 
 * `am_list_to_table()` - Transform list into table
 
 ### Author
 
-Kirill Mukhin, Analyst at [Geeky House](https://geeky.house/)
+Kirill Mukhin, Analytics Engineer at [Geeky House](https://geeky.house/)

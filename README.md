@@ -36,6 +36,7 @@ A Wrapper for AppMagic API
 
 * `am_united_publisher()` - Get Data for United Publisher
 * `am_united_publishers()` - Search for United Publishers
+* `am_united_publishers_ids()` - Get United Publishers Info by United Publishers IDs
 * `am_united_publisher_united_apps()` - Get United Applications for United Publisher
 
 ## Ad Intelligence

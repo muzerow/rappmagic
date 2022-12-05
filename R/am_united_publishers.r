@@ -1,5 +1,5 @@
 #' Search for United Publishers
-#' @description Search for United Publishers
+#' @description Search for United Publishers <https://api.appmagic.rocks/v1/docs#operation/getUnitedPublishers>
 #' @importFrom httr add_headers content GET
 #'
 #' @param search Search query
@@ -8,7 +8,7 @@
 #' @export
 
 am_united_publishers <- function(search, signature) {
-  united_publishers <- GET("http://api.appmagic.rocks/v1/united-publishers",
+  united_publishers <- GET("https://api.appmagic.rocks/v1/united-publishers",
                            query = list(search = search),
                            add_headers("Authorization" = signature,
                                        "Accept-Encoding" = "gzip"))

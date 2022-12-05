@@ -12,5 +12,5 @@ am_auth(name, password)
 \item{password}{Account password}
 }
 \description{
-Get AppMagic API Authentication token
+Get AppMagic API Authentication token <https://api.appmagic.rocks/v1/docs#section/Authentication>
 }

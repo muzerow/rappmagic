@@ -1,5 +1,5 @@
 #' Get Advanced Search
-#' @description Get Advanced Search
+#' @description Get Advanced Search <https://api.appmagic.rocks/v1/docs#operation/advancedSearch>
 #' @importFrom httr add_headers content GET
 #'
 #' @param release_date_gte Release Date Gte (minimum date is 2015-01-01)

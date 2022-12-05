@@ -1,5 +1,5 @@
 #' Get Data for United Application
-#' @description Get Data for United Application
+#' @description Get Data for United Application <https://api.appmagic.rocks/v1/docs#operation/getUnitedApplicationsHistory>
 #' @importFrom httr add_headers content GET
 #'
 #' @param aggregation Period of data summarization

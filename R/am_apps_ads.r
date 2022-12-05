@@ -1,5 +1,5 @@
 #' Get Application Ads
-#' @description Get Application Ads
+#' @description Get Application Ads <https://api.appmagic.rocks/v1/docs#operation/getApplicationAds>
 #' @importFrom httr add_headers content GET
 #'
 #' @param appIds Application store ID

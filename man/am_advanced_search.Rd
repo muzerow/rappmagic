@@ -51,5 +51,5 @@ am_advanced_search(
 \item{signature}{Authentication token}
 }
 \description{
-Get Advanced Search
+Get Advanced Search <https://api.appmagic.rocks/v1/docs#operation/advancedSearch>
 }

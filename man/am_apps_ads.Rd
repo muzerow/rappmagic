@@ -45,5 +45,5 @@ am_apps_ads(
 \item{signature}{Authentication token}
 }
 \description{
-Get Application Ads
+Get Application Ads <https://api.appmagic.rocks/v1/docs#operation/getApplicationAds>
 }

@@ -1,5 +1,5 @@
 #' Get Top Trending Applications
-#' @description Get Top Trending Applications
+#' @description Get Top Trending Applications <https://api.appmagic.rocks/v1/docs#operation/getTopTrending>
 #' @importFrom httr add_headers content GET
 #'
 #' @param store Store code
@@ -22,7 +22,7 @@
 am_top_trending <- function(store, type, country, date_from, date_to, limit = NULL, depth = NULL,
                             method = NULL, tag_id = NULL, category_ids = NULL, headquarter = NULL,
                             new_only = NULL, kind = NULL, signature) {
-  top_trending <- GET("http://api.appmagic.rocks/v1/tops/trending",
+  top_trending <- GET("https://api.appmagic.rocks/v1/tops/trending",
                          query = list(store = store,
                                       type = type,
                                       country = country,

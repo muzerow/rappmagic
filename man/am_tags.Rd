@@ -10,5 +10,5 @@ am_tags(signature)
 \item{signature}{Authentication token}
 }
 \description{
-Get AppMagic Tags
+Get AppMagic Tags <https://api.appmagic.rocks/v1/docs#operation/getTags>
 }

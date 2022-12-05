@@ -1,5 +1,5 @@
 #' Get Data for Application
-#' @description Get Data for Application
+#' @description Get Data for Application <https://api.appmagic.rocks/v1/docs#operation/getApplicationHistory>
 #' @importFrom httr add_headers content GET
 #'
 #' @param aggregation Period of data summarization

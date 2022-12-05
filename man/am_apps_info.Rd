@@ -14,5 +14,5 @@ am_apps_info(store, store_application_id, signature)
 \item{signature}{Authentication token}
 }
 \description{
-Get Application Info by Store Application ID
+Get Application Info by Store Application ID <https://api.appmagic.rocks/v1/docs#operation/getApplicationInfo>
 }

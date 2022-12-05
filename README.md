@@ -43,7 +43,7 @@ A Wrapper for AppMagic API
 
 * `am_apps_ads()` - Get Application Ads
 
-## Ad Intelligence
+## Contacts
 
 * `am_contacts_companies()` - Get LinkedIn Companies from United Publisher ID
 

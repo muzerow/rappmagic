@@ -1,5 +1,5 @@
 #' Get AppMagic Categories
-#' @description Get AppMagic Categories
+#' @description Get AppMagic Categories <https://api.appmagic.rocks/v1/docs#operation/getCategories>
 #' @importFrom httr add_headers content GET
 #'
 #' @param signature Authentication token

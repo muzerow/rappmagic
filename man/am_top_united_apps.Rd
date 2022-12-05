@@ -33,5 +33,5 @@ am_top_united_apps(
 \item{signature}{Authentication token}
 }
 \description{
-Get Top United Applications
+Get Top United Applications <https://api.appmagic.rocks/v1/docs#operation/getTopUnitedApplications>
 }

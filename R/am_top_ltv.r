@@ -1,5 +1,5 @@
 #' Get Top LTV
-#' @description Get Top LTV
+#' @description Get Top LTV <https://api.appmagic.rocks/v1/docs#operation/getTopLtv>
 #' @importFrom httr add_headers content GET
 #'
 #' @param tag_id Tag ID

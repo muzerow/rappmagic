@@ -12,5 +12,5 @@ am_united_apps_ids(ids, signature)
 \item{signature}{Authentication token}
 }
 \description{
-Get United Applications Info by United Applications IDs
+Get United Applications Info by United Applications IDs <https://api.appmagic.rocks/v1/docs#operation/getUnitedApplicationsByIds>
 }

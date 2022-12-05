@@ -30,5 +30,5 @@ am_history_united_apps(
 \item{signature}{Authentication token}
 }
 \description{
-Get Data for United Application
+Get Data for United Application <https://api.appmagic.rocks/v1/docs#operation/getUnitedApplicationsHistory>
 }

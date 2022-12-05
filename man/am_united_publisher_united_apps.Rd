@@ -12,5 +12,5 @@ am_united_publisher_united_apps(id, signature)
 \item{signature}{Authentication token}
 }
 \description{
-Get United Applications for United Publisher
+Get United Applications for United Publisher <https://api.appmagic.rocks/v1/docs#operation/getUnitedPublisherUnitedApplications>
 }

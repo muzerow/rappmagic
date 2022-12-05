@@ -16,7 +16,7 @@
 
 am_top_publishers <- function(date, store, aggregation, tag_id = NULL, headquarters = NULL,
                               countries, limit = NULL, sort, signature) {
-  top_publishers <- GET("http://api.appmagic.rocks/v1/tops/publishers",
+  top_publishers <- GET("https://api.appmagic.rocks/v1/tops/publishers",
                         query = list(date = date,
                                      store = store,
                                      aggregation = aggregation,

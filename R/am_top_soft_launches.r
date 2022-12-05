@@ -1,5 +1,5 @@
 #' Get Top Soft Launches
-#' @description Get Top Soft Launches
+#' @description Get Top Soft Launches <https://api.appmagic.rocks/v1/docs#operation/getTopSoftLaunches>
 #' @importFrom httr add_headers content GET
 #'
 #' @param date_from Start date of TOP (minimum date is 2015-01-01)

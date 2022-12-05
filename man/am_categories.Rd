@@ -10,5 +10,5 @@ am_categories(signature)
 \item{signature}{Authentication token}
 }
 \description{
-Get AppMagic Categories
+Get AppMagic Categories <https://api.appmagic.rocks/v1/docs#operation/getCategories>
 }

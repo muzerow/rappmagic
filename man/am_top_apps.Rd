@@ -36,5 +36,5 @@ am_top_apps(
 \item{signature}{Authentication token}
 }
 \description{
-Get Top Applications
+Get Top Applications <https://api.appmagic.rocks/v1/docs#operation/getTopApplications>
 }

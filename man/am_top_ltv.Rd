@@ -18,5 +18,5 @@ am_top_ltv(tag_id = NULL, store, limit = NULL, country, signature)
 \item{signature}{Authentication token}
 }
 \description{
-Get Top LTV
+Get Top LTV <https://api.appmagic.rocks/v1/docs#operation/getTopLtv>
 }

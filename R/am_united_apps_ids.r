@@ -1,5 +1,5 @@
 #' Get United Applications Info by United Applications IDs
-#' @description Get United Applications Info by United Applications IDs
+#' @description Get United Applications Info by United Applications IDs <https://api.appmagic.rocks/v1/docs#operation/getUnitedApplicationsByIds>
 #' @importFrom httr add_headers content POST
 #'
 #' @param ids Vector of united applications IDs

@@ -1,5 +1,5 @@
 #' Get Data for United Publisher
-#' @description Get Data for United Publisher
+#' @description Get Data for United Publisher <https://api.appmagic.rocks/v1/docs#operation/getUnitedPublisher>
 #' @importFrom httr add_headers content GET
 #' @importFrom glue glue
 #'
@@ -9,7 +9,7 @@
 #' @export
 
 am_united_publisher <- function(id, signature) {
-  united_publisher <- GET(glue("http://api.appmagic.rocks/v1/united-publishers/{id}"),
+  united_publisher <- GET(glue("https://api.appmagic.rocks/v1/united-publishers/{id}"),
                           add_headers("Authorization" = signature,
                                       "Accept-Encoding" = "gzip"))
 

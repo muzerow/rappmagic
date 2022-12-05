@@ -1,5 +1,5 @@
 #' Get Application Info by Store Application ID
-#' @description Get Application Info by Store Application ID
+#' @description Get Application Info by Store Application ID <https://api.appmagic.rocks/v1/docs#operation/getApplicationInfo>
 #' @importFrom httr add_headers content GET
 #' @importFrom glue glue
 #'
@@ -10,7 +10,7 @@
 #' @export
 
 am_apps_info <- function(store, store_application_id, signature) {
-  apps_info <- GET(glue("http://api.appmagic.rocks/v1/applications/{store}/{store_application_id}/info"),
+  apps_info <- GET(glue("https://api.appmagic.rocks/v1/applications/{store}/{store_application_id}/info"),
                    add_headers("Authorization" = signature,
                                "Accept-Encoding" = "gzip"))
 

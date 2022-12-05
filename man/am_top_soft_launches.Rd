@@ -42,5 +42,5 @@ am_top_soft_launches(
 \item{signature}{Authentication token}
 }
 \description{
-Get Top Soft Launches
+Get Top Soft Launches <https://api.appmagic.rocks/v1/docs#operation/getTopSoftLaunches>
 }

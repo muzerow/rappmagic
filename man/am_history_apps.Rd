@@ -33,5 +33,5 @@ am_history_apps(
 \item{signature}{Authentication token}
 }
 \description{
-Get Data for Application
+Get Data for Application <https://api.appmagic.rocks/v1/docs#operation/getApplicationHistory>
 }

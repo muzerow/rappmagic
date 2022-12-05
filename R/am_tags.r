@@ -1,5 +1,5 @@
 #' Get AppMagic Tags
-#' @description Get AppMagic Tags
+#' @description Get AppMagic Tags <https://api.appmagic.rocks/v1/docs#operation/getTags>
 #' @importFrom httr add_headers content GET
 #'
 #' @param signature Authentication token

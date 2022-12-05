@@ -12,5 +12,5 @@ am_united_publishers(search, signature)
 \item{signature}{Authentication token}
 }
 \description{
-Search for United Publishers
+Search for United Publishers <https://api.appmagic.rocks/v1/docs#operation/getUnitedPublishers>
 }

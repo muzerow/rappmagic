@@ -1,5 +1,5 @@
 #' Get United Applications for United Publisher
-#' @description Get United Applications for United Publisher
+#' @description Get United Applications for United Publisher <https://api.appmagic.rocks/v1/docs#operation/getUnitedPublisherUnitedApplications>
 #' @importFrom httr add_headers content GET
 #' @importFrom glue glue
 #'
@@ -9,7 +9,7 @@
 #' @export
 
 am_united_publisher_united_apps <- function(id, signature) {
-  united_publisher_united_apps <- GET(glue("http://api.appmagic.rocks/v1/united-publishers/{id}/united-applications"),
+  united_publisher_united_apps <- GET(glue("https://api.appmagic.rocks/v1/united-publishers/{id}/united-applications"),
                                       add_headers("Authorization" = signature,
                                                   "Accept-Encoding" = "gzip"))
 

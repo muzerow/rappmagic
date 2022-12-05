@@ -1,5 +1,5 @@
 #' Get Top United Applications
-#' @description Get Top United Applications
+#' @description Get Top United Applications <https://api.appmagic.rocks/v1/docs#operation/getTopUnitedApplications>
 #' @importFrom httr add_headers content GET
 #'
 #' @param aggregation Period of data summarization

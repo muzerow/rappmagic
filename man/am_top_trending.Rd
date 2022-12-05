@@ -51,5 +51,5 @@ am_top_trending(
 \item{signature}{Authentication token}
 }
 \description{
-Get Top Trending Applications
+Get Top Trending Applications <https://api.appmagic.rocks/v1/docs#operation/getTopTrending>
 }

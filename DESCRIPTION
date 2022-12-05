@@ -1,11 +1,11 @@
 Package: rappmagic
 Type: Package
 Title: A Wrapper for AppMagic API
-Version: 0.5.0
+Version: 0.5.1
 Author: Kirill Mukhin
 Maintainer: Kirill Mukhin <muzerow6@gmail.com>
 Description: Load data from AppMagic API.
-Imports: data.table, glue, httr, purrr, RCurl
+Imports: data.table, glue, httr, jsonlite, purrr, RCurl
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true

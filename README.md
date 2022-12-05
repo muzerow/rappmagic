@@ -46,6 +46,7 @@ A Wrapper for AppMagic API
 ## Contacts
 
 * `am_contacts_companies()` - Get LinkedIn Companies from United Publisher ID
+* `am_contacts_profiles()` - Get Profiles from Company ID
 
 ## Technical
 

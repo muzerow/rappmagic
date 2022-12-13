@@ -21,6 +21,7 @@ A Wrapper for AppMagic API
 ## United Applications
 
 * `am_united_apps_ids()` - Get United Applications Info by United Applications IDs
+* `am_united_app()` - Get United Application by United Application ID
 
 ## History
 

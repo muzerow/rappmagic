@@ -14,6 +14,7 @@ A Wrapper for AppMagic API
 * `am_app()` - Get Application by Store Application ID
 * `am_app_info()` - Get Application Info by Store Application ID
 * `am_app_release_notes()` - Get Application Release Notes by Store Application ID
+* `am_app_screenshots()` - Get Application Screenshots by Store Application ID
 
 ## United Applications
 

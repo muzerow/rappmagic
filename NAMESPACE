@@ -2,8 +2,9 @@
 
 export(am_advanced_search)
 export(am_app)
+export(am_app_info)
+export(am_app_release_notes)
 export(am_apps_ads)
-export(am_apps_info)
 export(am_auth)
 export(am_categories)
 export(am_contacts_companies)

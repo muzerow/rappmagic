@@ -22,6 +22,7 @@ A Wrapper for AppMagic API
 ## United Applications
 
 * `am_united_apps()` - Get United Applications by Search Query
+* `am_united_apps_app_ids()` - Get United Applications Info by Store Application IDs
 * `am_united_apps_ids()` - Get United Applications Info by United Applications IDs
 * `am_united_app()` - Get United Application by United Application ID
 * `am_united_app_ltv()` - Get United Application LTV by United Application ID

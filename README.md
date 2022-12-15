@@ -46,6 +46,7 @@ A Wrapper for AppMagic API
 
 * `am_publishers()` - Get Publishers by Search Query
 * `am_publisher()` - Get Publisher by Store Publisher ID
+* `am_publisher_apps()` - Get Publisher Applications by Store Publisher ID
 
 ## United Publishers
 

@@ -12,6 +12,7 @@ A Wrapper for AppMagic API
 ## Applications
 
 * `am_apps()` - Get Applications by Search Query
+* `am_apps_ids()` - Get Applications Info by Store Application IDs
 * `am_app()` - Get Application by Store Application ID
 * `am_app_info()` - Get Application Info by Store Application ID
 * `am_app_release_notes()` - Get Application Release Notes by Store Application ID

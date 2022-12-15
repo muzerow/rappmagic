@@ -1,7 +1,7 @@
 Package: rappmagic
 Type: Package
 Title: A Wrapper for AppMagic API
-Version: 0.6.0
+Version: 0.6.5
 Author: Kirill Mukhin
 Maintainer: Kirill Mukhin <muzerow6@gmail.com>
 Description: Load data from AppMagic API.

@@ -42,6 +42,10 @@ A Wrapper for AppMagic API
 * `am_top_trending()` - Get Top Trending Applications
 * `am_top_united_apps()` - Get Top United Applications
 
+## Publishers
+
+* `am_publishers()` - Get Publishers by Search Query
+
 ## United Publishers
 
 * `am_united_publisher()` - Get Data for United Publisher

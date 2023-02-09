@@ -1,6 +1,12 @@
 # rappmagic <img src='https://raw.githubusercontent.com/muzerow/rappmagic/master/inst/rappmagic.png' align="right" height="139" /></a>
 A Wrapper for AppMagic API
 
+# Installation
+
+```r
+remotes::install_github("muzerow/rappmagic")
+```
+
 # Available functions
 
 ## General

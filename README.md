@@ -36,7 +36,7 @@ remotes::install_github("muzerow/rappmagic")
 ## History
 
 * `am_history_apps()` - Get Data for Application
-* `am_history_united_apps()` - Get Data for United Application
+* `am_history_united_app()` - Get Data for United Application
 
 ## Tops
 
@@ -76,4 +76,4 @@ remotes::install_github("muzerow/rappmagic")
 
 ### Author
 
-Kirill Mukhin, Analytics Engineer at [Geeky House](https://geeky.house/)
+Kirill Mukhin, Game Analyst & Analytics Engineer at [Geeky House](https://geeky.house/)

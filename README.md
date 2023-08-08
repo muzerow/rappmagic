@@ -76,4 +76,4 @@ remotes::install_github("muzerow/rappmagic")
 
 ### Author
 
-Kirill Mukhin, Game Analyst & Analytics Engineer at [Geeky House](https://geeky.house/)
+Kirill Mukhin, Data Analyst at [Geeky House](https://geeky.house/)

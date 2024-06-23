@@ -9,6 +9,7 @@
 am_tags <- function(signature) {
   tags <- GET("https://api.appmagic.rocks/v1/tags",
               add_headers("Authorization" = signature,
+                          "Accept" = "text/csv",
                           "Accept-Encoding" = "gzip"))
 
   if (tags$status_code != 200) {

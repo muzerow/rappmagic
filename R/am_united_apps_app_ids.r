@@ -4,6 +4,7 @@
 #'
 #' @param ids_array List of lists with store IDs and store applications IDs
 #' @param signature Authentication token
+#' @param accept Accept header value
 #'
 #' @export
 

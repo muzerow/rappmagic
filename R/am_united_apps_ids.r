@@ -4,6 +4,7 @@
 #'
 #' @param ids Vector of united applications IDs
 #' @param signature Authentication token
+#' @param accept Accept header value
 #'
 #' @export
 

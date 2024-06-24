@@ -4,12 +4,14 @@
 \alias{am_united_apps_ids}
 \title{Get United Applications Info by United Applications IDs}
 \usage{
-am_united_apps_ids(ids, signature)
+am_united_apps_ids(ids, signature, accept = "text/csv")
 }
 \arguments{
 \item{ids}{Vector of united applications IDs}
 
 \item{signature}{Authentication token}
+
+\item{accept}{Accept header value}
 }
 \description{
 Get United Applications Info by United Applications IDs <https://api.appmagic.rocks/v1/docs#operation/getUnitedApplicationsByIds>

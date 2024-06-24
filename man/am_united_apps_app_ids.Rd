@@ -4,12 +4,14 @@
 \alias{am_united_apps_app_ids}
 \title{Get United Applications Info by Store Application IDs}
 \usage{
-am_united_apps_app_ids(ids_array, signature)
+am_united_apps_app_ids(ids_array, signature, accept = "text/csv")
 }
 \arguments{
 \item{ids_array}{List of lists with store IDs and store applications IDs}
 
 \item{signature}{Authentication token}
+
+\item{accept}{Accept header value}
 }
 \description{
 Get United Applications Info by Store Application IDs <https://api.appmagic.rocks/v1/docs#operation/getUnitedApplicationsByAppIds>

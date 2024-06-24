@@ -15,7 +15,8 @@ am_apps <- function(search, limit = NULL, offset = NULL, signature) {
                            limit = limit,
                            offset = offset),
               add_headers("Authorization" = signature,
-                          "Accept-Encoding" = "gzip"))
+                          "Accept-Encoding" = "gzip",
+                          "Accept" = "text/csv"))
 
   if (apps$status_code != 200) {
     stop(paste0("Error code ", apps$status_code, ": ", content(apps)$message))

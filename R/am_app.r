@@ -12,7 +12,8 @@
 am_app <- function(store, store_application_id, signature) {
   app <- GET(glue("https://api.appmagic.rocks/v1/applications/{store}/{store_application_id}"),
              add_headers("Authorization" = signature,
-                         "Accept-Encoding" = "gzip"))
+                         "Accept-Encoding" = "gzip",
+                         "Accept" = "text/csv"))
 
   if (app$status_code != 200) {
     stop(paste0("Error code ", app$status_code, ": ", content(app)$message))

@@ -15,7 +15,8 @@ am_united_apps <- function(search, limit = NULL, offset = NULL, signature) {
                                   limit = limit,
                                   offset = offset),
                      add_headers("Authorization" = signature,
-                                 "Accept-Encoding" = "gzip"))
+                                 "Accept-Encoding" = "gzip",
+                                 "Accept" = "text/csv"))
 
   if (united_apps$status_code != 200) {
     stop(paste0("Error code ", united_apps$status_code, ": ", content(united_apps)$message))

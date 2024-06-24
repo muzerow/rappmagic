@@ -12,7 +12,8 @@
 am_app_release_notes <- function(store, store_application_id, signature) {
   app_release_notes <- GET(glue("https://api.appmagic.rocks/v1/applications/{store}/{store_application_id}/release-notes"),
              add_headers("Authorization" = signature,
-                         "Accept-Encoding" = "gzip"))
+                         "Accept-Encoding" = "gzip",
+                         "Accept" = "text/csv"))
 
   if (app_release_notes$status_code != 200) {
     stop(paste0("Error code ", app_release_notes$status_code, ": ", content(app_release_notes)$message))

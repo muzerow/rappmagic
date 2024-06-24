@@ -17,7 +17,8 @@ am_top_ltv <- function(tag_id = NULL, store, limit = NULL, country, signature) {
                                limit = limit,
                                country = country),
                   add_headers("Authorization" = signature,
-                              "Accept-Encoding" = "gzip"))
+                              "Accept-Encoding" = "gzip",
+                              "Accept" = "text/csv"))
 
   if (top_ltv$status_code != 200) {
     stop(paste0("Error code ", top_ltv$status_code, ": ", content(top_ltv)$message))

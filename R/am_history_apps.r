@@ -24,7 +24,8 @@ am_history_apps <- function(aggregation = NULL, date_from = NULL, date_to = NULL
                                           country = country,
                                           category_id = category_id),
                              add_headers("Authorization" = signature,
-                                         "Accept-Encoding" = "gzip"))
+                                         "Accept-Encoding" = "gzip",
+                                         "Accept" = "text/csv"))
 
   if (history_apps$status_code != 200) {
     stop(paste0("Error code ", history_apps$status_code, ": ", content(history_apps)$message))

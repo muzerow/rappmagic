@@ -36,7 +36,8 @@ am_top_trending <- function(store, type, country, date_from, date_to, limit = NU
                                       headquarter = headquarter,
                                       new_only = new_only,
                                       kind = kind),
-                         add_headers("Authorization" = signature))
+                         add_headers("Authorization" = signature,
+                                     "Accept" = "text/csv"))
 
   if (top_trending$status_code != 200) {
     stop(paste0("Error code ", top_trending$status_code, ": ", content(top_trending)$message))

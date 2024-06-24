@@ -22,7 +22,7 @@ am_contacts_profiles <- function(company_id, page = NULL, person_not_titles = NU
                             body = toJSON(body),
                             add_headers("Authorization" = signature,
                                         "Accept-Encoding" = "gzip",
-                                        "Content-Type" = "application/json"))
+                                        "Accept" = "text/csv"))
 
   if (contacts_profiles$status_code != 200) {
     stop(paste0("Error code ", contacts_profiles$status_code, ": ", content(contacts_profiles)$message))

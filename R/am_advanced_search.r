@@ -36,7 +36,9 @@ am_advanced_search <- function(release_date_gte, release_date_lte, country, stor
                                       category_ids = category_ids,
                                       tag_id = tag_id,
                                       publisherPlace = publisher_place),
-                         add_headers("Authorization" = signature))
+                         add_headers("Authorization" = signature,
+                                     "Accept" = "text/csv")
+                        )
 
   if (advanced_search$status_code != 200) {
     stop(paste0("Error code ", advanced_search$status_code, ": ", content(advanced_search)$message))

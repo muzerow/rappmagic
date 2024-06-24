@@ -12,7 +12,8 @@ am_apps_ids <- function(ids_array, signature) {
                     body = ids_array,
                     encode = "json",
                     add_headers("Authorization" = signature,
-                                "Accept-Encoding" = "gzip"))
+                                "Accept-Encoding" = "gzip",
+                                "Accept" = "text/csv"))
 
   if (apps_info$status_code != 200) {
     stop(paste0("Error code ", apps_info$status_code, ": ", content(apps_info)$message))

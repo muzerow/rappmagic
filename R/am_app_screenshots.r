@@ -12,7 +12,8 @@
 am_app_screenshots <- function(store, store_application_id, signature) {
   app_screenshots <- GET(glue("https://api.appmagic.rocks/v1/applications/{store}/{store_application_id}/screenshots"),
                          add_headers("Authorization" = signature,
-                                     "Accept-Encoding" = "gzip"))
+                                     "Accept-Encoding" = "gzip",
+                                     "Accept" = "text/csv"))
 
   if (app_screenshots$status_code != 200) {
     stop(paste0("Error code ", app_screenshots$status_code, ": ", content(app_screenshots)$message))

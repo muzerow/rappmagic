@@ -31,7 +31,8 @@ am_apps_ads <- function(appIds, country, dateFrom, dateTo, sort, aggregation, co
                                adNetwork = adNetwork,
                                platform = platform,
                                type = type),
-                  add_headers("Authorization" = signature))
+                  add_headers("Authorization" = signature,
+                              "Accept" = "text/csv"))
 
   if (apps_ads$status_code != 200) {
     stop(paste0("Error code ", apps_ads$status_code, ": ", content(apps_ads)$message))

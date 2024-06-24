@@ -12,7 +12,8 @@ am_united_publishers_ids <- function(ids, signature) {
                                  body = as.list(ids),
                                  encode = "json",
                                  add_headers("Authorization" = signature,
-                                             "Accept-Encoding" = "gzip"))
+                                             "Accept-Encoding" = "gzip",
+                                             "Accept" = "text/csv"))
 
   if (united_publishers_info$status_code != 200) {
     stop(paste0("Error code ", united_publishers_info$status_code, ": ", content(united_publishers_info)$message))

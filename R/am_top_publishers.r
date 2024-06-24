@@ -25,7 +25,8 @@ am_top_publishers <- function(date, store, aggregation, tag_id = NULL, headquart
                                      countries = countries,
                                      limit = limit,
                                      sort = sort),
-                        add_headers("Authorization" = signature))
+                        add_headers("Authorization" = signature,
+                                    "Accept" = "text/csv"))
 
   if (top_publishers$status_code != 200) {
     stop(paste0("Error code ", top_publishers$status_code, ": ", content(top_publishers)$message))

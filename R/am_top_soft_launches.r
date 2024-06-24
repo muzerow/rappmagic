@@ -30,7 +30,8 @@ am_top_soft_launches <- function(date_from, date_to, include_countries, exclude_
                                         top_publisher = top_publisher,
                                         sort = sort,
                                         limit = limit),
-                           add_headers("Authorization" = signature))
+                           add_headers("Authorization" = signature,
+                                       "Accept" = "text/csv"))
 
   if (top_soft_launches$status_code != 200) {
     stop(paste0("Error code ", top_soft_launches$status_code, ": ", content(top_soft_launches)$message))

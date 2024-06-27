@@ -14,25 +14,31 @@
 #' @param platform Platform
 #' @param type Ad type
 #' @param signature Authentication token
+#' @param accept Accept header value
 #'
 #' @export
 
 am_apps_ads <- function(appIds, country, dateFrom, dateTo, sort, aggregation, count = NULL,
-                        offset, adNetwork = NULL, platform = NULL, type = NULL, signature) {
+                        offset, adNetwork = NULL, platform = NULL, type = NULL, signature, accept = "text/csv") {
   apps_ads <- GET("https://api.appmagic.rocks/v1/adint/application-ads",
-                  query = list(appIds = appIds,
-                               country = country,
-                               dateFrom = dateFrom,
-                               dateTo = dateTo,
-                               sort = sort,
-                               aggregation = aggregation,
-                               count = count,
-                               offset = offset,
-                               adNetwork = adNetwork,
-                               platform = platform,
-                               type = type),
-                  add_headers("Authorization" = signature,
-                              "Accept" = "text/csv"))
+    query = list(
+      appIds = appIds,
+      country = country,
+      dateFrom = dateFrom,
+      dateTo = dateTo,
+      sort = sort,
+      aggregation = aggregation,
+      count = count,
+      offset = offset,
+      adNetwork = adNetwork,
+      platform = platform,
+      type = type
+    ),
+    add_headers(
+      "Authorization" = signature,
+      "Accept" = accept
+    )
+  )
 
   if (apps_ads$status_code != 200) {
     stop(paste0("Error code ", apps_ads$status_code, ": ", content(apps_ads)$message))

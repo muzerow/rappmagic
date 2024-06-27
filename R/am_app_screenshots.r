@@ -6,14 +6,19 @@
 #' @param store Store code
 #' @param store_application_id Store application ID
 #' @param signature Authentication token
+#' @param accept Accept header value
 #'
 #' @export
 
-am_app_screenshots <- function(store, store_application_id, signature) {
-  app_screenshots <- GET(glue("https://api.appmagic.rocks/v1/applications/{store}/{store_application_id}/screenshots"),
-                         add_headers("Authorization" = signature,
-                                     "Accept-Encoding" = "gzip",
-                                     "Accept" = "text/csv"))
+am_app_screenshots <- function(store, store_application_id, signature, accept = "text/csv") {
+  app_screenshots <- GET(
+    glue("https://api.appmagic.rocks/v1/applications/{store}/{store_application_id}/screenshots"),
+    add_headers(
+      "Authorization" = signature,
+      "Accept-Encoding" = "gzip",
+      "Accept" = accept
+    )
+  )
 
   if (app_screenshots$status_code != 200) {
     stop(paste0("Error code ", app_screenshots$status_code, ": ", content(app_screenshots)$message))

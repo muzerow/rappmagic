@@ -16,17 +16,22 @@
 
 am_top_apps <- function(aggregation = NULL, sort, store, country, category_id = NULL, date, limit = NULL, tag_id = NULL, signature) {
   top_apps <- GET("https://api.appmagic.rocks/v1/tops/application",
-                  query = list(aggregation = aggregation,
-                               sort = sort,
-                               store = store,
-                               country = country,
-                               category_id = category_id,
-                               date = date,
-                               limit = limit,
-                               tag_id = tag_id),
-                  add_headers("Authorization" = signature,
-                              "Accept-Encoding" = "gzip",
-                              "Accept" = "text/csv"))
+    query = list(
+      aggregation = aggregation,
+      sort = sort,
+      store = store,
+      country = country,
+      category_id = category_id,
+      date = date,
+      limit = limit,
+      tag_id = tag_id
+    ),
+    add_headers(
+      "Authorization" = signature,
+      "Accept-Encoding" = "gzip",
+      "Accept" = "text/csv"
+    )
+  )
 
   if (top_apps$status_code != 200) {
     stop(paste0("Error code ", top_apps$status_code, ": ", content(top_apps)$message))

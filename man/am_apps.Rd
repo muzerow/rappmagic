@@ -4,7 +4,7 @@
 \alias{am_apps}
 \title{Get Applications by Search Query}
 \usage{
-am_apps(search, limit = NULL, offset = NULL, signature)
+am_apps(search, limit = NULL, offset = NULL, signature, accept = "text/csv")
 }
 \arguments{
 \item{search}{Search query}
@@ -14,6 +14,8 @@ am_apps(search, limit = NULL, offset = NULL, signature)
 \item{offset}{Offset of returned items}
 
 \item{signature}{Authentication token}
+
+\item{accept}{Accept header value}
 }
 \description{
 Get Applications by Search Query <https://api.appmagic.rocks/v1/docs#operation/getApplications>

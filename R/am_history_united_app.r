@@ -16,15 +16,20 @@
 am_history_united_app <- function(aggregation = NULL, date_from = NULL, date_to = NULL,
                                   store, united_application_id, country, signature, accept = "text/csv") {
   history_united_app <- GET("https://api.appmagic.rocks/v1/history/united-application",
-                            query = list(aggregation = aggregation,
-                                         date_from = date_from,
-                                         date_to = date_to,
-                                         store = store,
-                                         united_application_id = united_application_id,
-                                         country = country),
-                            add_headers("Authorization" = signature,
-                                        "Accept-Encoding" = "gzip",
-                                        "Accept" = accept))
+    query = list(
+      aggregation = aggregation,
+      date_from = date_from,
+      date_to = date_to,
+      store = store,
+      united_application_id = united_application_id,
+      country = country
+    ),
+    add_headers(
+      "Authorization" = signature,
+      "Accept-Encoding" = "gzip",
+      "Accept" = accept
+    )
+  )
 
   if (history_united_app$status_code != 200) {
     stop(paste0("Error code ", history_united_app$status_code, ": ", content(history_united_app)$message))
@@ -32,4 +37,3 @@ am_history_united_app <- function(aggregation = NULL, date_from = NULL, date_to 
 
   content(history_united_app)
 }
-

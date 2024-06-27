@@ -16,16 +16,21 @@
 am_history_apps <- function(aggregation = NULL, date_from = NULL, date_to = NULL, store,
                             store_application_id, country, category_id = NULL, signature) {
   history_apps <- GET("https://api.appmagic.rocks/v1/history/application",
-                             query = list(aggregation = aggregation,
-                                          date_from = date_from,
-                                          date_to = date_to,
-                                          store = store,
-                                          store_application_id = store_application_id,
-                                          country = country,
-                                          category_id = category_id),
-                             add_headers("Authorization" = signature,
-                                         "Accept-Encoding" = "gzip",
-                                         "Accept" = "text/csv"))
+    query = list(
+      aggregation = aggregation,
+      date_from = date_from,
+      date_to = date_to,
+      store = store,
+      store_application_id = store_application_id,
+      country = country,
+      category_id = category_id
+    ),
+    add_headers(
+      "Authorization" = signature,
+      "Accept-Encoding" = "gzip",
+      "Accept" = "text/csv"
+    )
+  )
 
   if (history_apps$status_code != 200) {
     stop(paste0("Error code ", history_apps$status_code, ": ", content(history_apps)$message))

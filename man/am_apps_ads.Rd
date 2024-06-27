@@ -16,7 +16,8 @@ am_apps_ads(
   adNetwork = NULL,
   platform = NULL,
   type = NULL,
-  signature
+  signature,
+  accept = "text/csv"
 )
 }
 \arguments{
@@ -43,6 +44,8 @@ am_apps_ads(
 \item{type}{Ad type}
 
 \item{signature}{Authentication token}
+
+\item{accept}{Accept header value}
 }
 \description{
 Get Application Ads <https://api.appmagic.rocks/v1/docs#operation/getApplicationAds>

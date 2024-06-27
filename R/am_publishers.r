@@ -11,12 +11,17 @@
 
 am_publishers <- function(search, limit = NULL, offset = NULL, signature) {
   publishers <- GET("https://api.appmagic.rocks/v1/publishers",
-                    query = list(search = search,
-                                 limit = limit,
-                                 offset = offset),
-                    add_headers("Authorization" = signature,
-                                "Accept-Encoding" = "gzip",
-                                "Accept" = "text/csv"))
+    query = list(
+      search = search,
+      limit = limit,
+      offset = offset
+    ),
+    add_headers(
+      "Authorization" = signature,
+      "Accept-Encoding" = "gzip",
+      "Accept" = "text/csv"
+    )
+  )
 
   if (publishers$status_code != 200) {
     stop(paste0("Error code ", publishers$status_code, ": ", content(publishers)$message))

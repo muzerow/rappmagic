@@ -9,10 +9,14 @@
 #' @export
 
 am_contacts_companies <- function(id, signature) {
-  contacts_companies <- GET(glue("https://api.appmagic.rocks/v1/contacts/companies/{id}"),
-                            add_headers("Authorization" = signature,
-                                        "Accept-Encoding" = "gzip",
-                                        "Accept" = "text/csv"))
+  contacts_companies <- GET(
+    glue("https://api.appmagic.rocks/v1/contacts/companies/{id}"),
+    add_headers(
+      "Authorization" = signature,
+      "Accept-Encoding" = "gzip",
+      "Accept" = "text/csv"
+    )
+  )
 
   if (contacts_companies$status_code != 200) {
     stop(paste0("Error code ", contacts_companies$status_code, ": ", content(contacts_companies)$message))

@@ -4,7 +4,12 @@
 \alias{am_app_release_notes}
 \title{Get Application Release Notes by Store Application ID}
 \usage{
-am_app_release_notes(store, store_application_id, signature)
+am_app_release_notes(
+  store,
+  store_application_id,
+  signature,
+  accept = "text/csv"
+)
 }
 \arguments{
 \item{store}{Store code}
@@ -12,6 +17,8 @@ am_app_release_notes(store, store_application_id, signature)
 \item{store_application_id}{Store application ID}
 
 \item{signature}{Authentication token}
+
+\item{accept}{Accept header value}
 }
 \description{
 Get Application Release Notes by Store Application ID <https://api.appmagic.rocks/v1/docs#operation/getApplicationReleaseNotes>

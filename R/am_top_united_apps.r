@@ -15,16 +15,21 @@
 
 am_top_united_apps <- function(aggregation = NULL, sort, store, country, date, limit = NULL, tag_id = NULL, signature) {
   top_united_apps <- GET("https://api.appmagic.rocks/v1/tops/united-application",
-                         query = list(aggregation = aggregation,
-                                      sort = sort,
-                                      store = store,
-                                      country = country,
-                                      date = date,
-                                      limit = limit,
-                                      tag_id = tag_id),
-                         add_headers("Authorization" = signature,
-                                     "Accept-Encoding" = "gzip",
-                                     "Accept" = "text/csv"))
+    query = list(
+      aggregation = aggregation,
+      sort = sort,
+      store = store,
+      country = country,
+      date = date,
+      limit = limit,
+      tag_id = tag_id
+    ),
+    add_headers(
+      "Authorization" = signature,
+      "Accept-Encoding" = "gzip",
+      "Accept" = "text/csv"
+    )
+  )
 
   if (top_united_apps$status_code != 200) {
     stop(paste0("Error code ", top_united_apps$status_code, ": ", content(top_united_apps)$message))

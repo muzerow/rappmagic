@@ -17,16 +17,21 @@
 am_top_publishers <- function(date, store, aggregation, tag_id = NULL, headquarters = NULL,
                               countries, limit = NULL, sort, signature) {
   top_publishers <- GET("https://api.appmagic.rocks/v1/tops/publishers",
-                        query = list(date = date,
-                                     store = store,
-                                     aggregation = aggregation,
-                                     tag_id = tag_id,
-                                     headquarters = headquarters,
-                                     countries = countries,
-                                     limit = limit,
-                                     sort = sort),
-                        add_headers("Authorization" = signature,
-                                    "Accept" = "text/csv"))
+    query = list(
+      date = date,
+      store = store,
+      aggregation = aggregation,
+      tag_id = tag_id,
+      headquarters = headquarters,
+      countries = countries,
+      limit = limit,
+      sort = sort
+    ),
+    add_headers(
+      "Authorization" = signature,
+      "Accept" = "text/csv"
+    )
+  )
 
   if (top_publishers$status_code != 200) {
     stop(paste0("Error code ", top_publishers$status_code, ": ", content(top_publishers)$message))
@@ -34,4 +39,3 @@ am_top_publishers <- function(date, store, aggregation, tag_id = NULL, headquart
 
   content(top_publishers)
 }
-

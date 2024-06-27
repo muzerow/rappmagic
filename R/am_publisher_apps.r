@@ -10,10 +10,14 @@
 #' @export
 
 am_publisher_apps <- function(store, store_publisher_id, signature) {
-  publisher_apps <- GET(glue("https://api.appmagic.rocks/v1/publishers/{store}/{store_publisher_id}/applications"),
-                        add_headers("Authorization" = signature,
-                                    "Accept-Encoding" = "gzip",
-                                    "Accept" = "text/csv"))
+  publisher_apps <- GET(
+    glue("https://api.appmagic.rocks/v1/publishers/{store}/{store_publisher_id}/applications"),
+    add_headers(
+      "Authorization" = signature,
+      "Accept-Encoding" = "gzip",
+      "Accept" = "text/csv"
+    )
+  )
 
   if (publisher_apps$status_code != 200) {
     stop(paste0("Error code ", publisher_apps$status_code, ": ", content(publisher_apps)$message))

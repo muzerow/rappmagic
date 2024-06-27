@@ -23,21 +23,26 @@ am_top_trending <- function(store, type, country, date_from, date_to, limit = NU
                             method = NULL, tag_id = NULL, category_ids = NULL, headquarter = NULL,
                             new_only = NULL, kind = NULL, signature) {
   top_trending <- GET("https://api.appmagic.rocks/v1/tops/trending",
-                         query = list(store = store,
-                                      type = type,
-                                      country = country,
-                                      date_from = date_from,
-                                      date_to = date_to,
-                                      limit = limit,
-                                      depth = depth,
-                                      method = method,
-                                      tag_id = tag_id,
-                                      category_ids = category_ids,
-                                      headquarter = headquarter,
-                                      new_only = new_only,
-                                      kind = kind),
-                         add_headers("Authorization" = signature,
-                                     "Accept" = "text/csv"))
+    query = list(
+      store = store,
+      type = type,
+      country = country,
+      date_from = date_from,
+      date_to = date_to,
+      limit = limit,
+      depth = depth,
+      method = method,
+      tag_id = tag_id,
+      category_ids = category_ids,
+      headquarter = headquarter,
+      new_only = new_only,
+      kind = kind
+    ),
+    add_headers(
+      "Authorization" = signature,
+      "Accept" = "text/csv"
+    )
+  )
 
   if (top_trending$status_code != 200) {
     stop(paste0("Error code ", top_trending$status_code, ": ", content(top_trending)$message))

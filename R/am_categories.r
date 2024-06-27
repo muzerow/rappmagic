@@ -7,10 +7,14 @@
 #' @export
 
 am_categories <- function(signature) {
-  categories <- GET("https://api.appmagic.rocks/v1/categories",
-                    add_headers("Authorization" = signature,
-                                "Accept-Encoding" = "gzip",
-                                "Accept" = "text/csv"))
+  categories <- GET(
+    "https://api.appmagic.rocks/v1/categories",
+    add_headers(
+      "Authorization" = signature,
+      "Accept-Encoding" = "gzip",
+      "Accept" = "text/csv"
+    )
+  )
 
   if (categories$status_code != 200) {
     stop(paste0("Error code ", categories$status_code, ": ", content(categories)$message))

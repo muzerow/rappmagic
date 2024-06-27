@@ -18,7 +18,8 @@ am_advanced_search(
   category_ids = NULL,
   tag_id = NULL,
   publisher_place = NULL,
-  signature
+  signature,
+  accept = "text/csv"
 )
 }
 \arguments{
@@ -49,6 +50,8 @@ am_advanced_search(
 \item{publisher_place}{Publisher place}
 
 \item{signature}{Authentication token}
+
+\item{accept}{Accept header value}
 }
 \description{
 Get Advanced Search <https://api.appmagic.rocks/v1/docs#operation/advancedSearch>

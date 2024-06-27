@@ -9,10 +9,14 @@
 #' @export
 
 am_united_app_ltv <- function(id, signature) {
-  united_app_ltv <- GET(glue("https://api.appmagic.rocks/v1/united-applications/{id}/ltv"),
-                        add_headers("Authorization" = signature,
-                                    "Accept-Encoding" = "gzip",
-                                    "Accept" = "text/csv"))
+  united_app_ltv <- GET(
+    glue("https://api.appmagic.rocks/v1/united-applications/{id}/ltv"),
+    add_headers(
+      "Authorization" = signature,
+      "Accept-Encoding" = "gzip",
+      "Accept" = "text/csv"
+    )
+  )
 
   if (united_app_ltv$status_code != 200) {
     stop(paste0("Error code ", united_app_ltv$status_code, ": ", content(united_app_ltv)$message))

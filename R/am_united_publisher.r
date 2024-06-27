@@ -9,10 +9,14 @@
 #' @export
 
 am_united_publisher <- function(id, signature) {
-  united_publisher <- GET(glue("https://api.appmagic.rocks/v1/united-publishers/{id}"),
-                          add_headers("Authorization" = signature,
-                                      "Accept-Encoding" = "gzip",
-                                      "Accept" = "text/csv"))
+  united_publisher <- GET(
+    glue("https://api.appmagic.rocks/v1/united-publishers/{id}"),
+    add_headers(
+      "Authorization" = signature,
+      "Accept-Encoding" = "gzip",
+      "Accept" = "text/csv"
+    )
+  )
 
   if (united_publisher$status_code != 200) {
     stop(paste0("Error code ", united_publisher$status_code, ": ", content(united_publisher)$message))

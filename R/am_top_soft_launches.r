@@ -20,18 +20,23 @@ am_top_soft_launches <- function(date_from, date_to, include_countries, exclude_
                                  category_ids = NULL, only_global_publisher = NULL, top_publisher = NULL,
                                  sort, limit = NULL, signature) {
   top_soft_launches <- GET("https://api.appmagic.rocks/v1/tops/soft-launches",
-                           query = list(date_from = date_from,
-                                        date_to = date_to,
-                                        include_countries = include_countries,
-                                        exclude_countries = exclude_countries,
-                                        store = store,
-                                        category_ids = category_ids,
-                                        only_global_publisher = only_global_publisher,
-                                        top_publisher = top_publisher,
-                                        sort = sort,
-                                        limit = limit),
-                           add_headers("Authorization" = signature,
-                                       "Accept" = "text/csv"))
+    query = list(
+      date_from = date_from,
+      date_to = date_to,
+      include_countries = include_countries,
+      exclude_countries = exclude_countries,
+      store = store,
+      category_ids = category_ids,
+      only_global_publisher = only_global_publisher,
+      top_publisher = top_publisher,
+      sort = sort,
+      limit = limit
+    ),
+    add_headers(
+      "Authorization" = signature,
+      "Accept" = "text/csv"
+    )
+  )
 
   if (top_soft_launches$status_code != 200) {
     stop(paste0("Error code ", top_soft_launches$status_code, ": ", content(top_soft_launches)$message))

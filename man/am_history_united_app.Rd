@@ -11,7 +11,8 @@ am_history_united_app(
   store,
   united_application_id,
   country,
-  signature
+  signature,
+  accept = "text/csv"
 )
 }
 \arguments{
@@ -28,6 +29,8 @@ am_history_united_app(
 \item{country}{Alpha-2 country code}
 
 \item{signature}{Authentication token}
+
+\item{accept}{Accept header value}
 }
 \description{
 Get Data for United Application <https://api.appmagic.rocks/v1/docs#operation/getUnitedApplicationHistory>

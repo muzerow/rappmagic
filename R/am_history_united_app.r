@@ -9,10 +9,12 @@
 #' @param united_application_id United app ID
 #' @param country Alpha-2 country code
 #' @param signature Authentication token
+#' @param accept Accept header value
 #'
 #' @export
 
-am_history_united_app <- function(aggregation = NULL, date_from = NULL, date_to = NULL, store, united_application_id, country, signature) {
+am_history_united_app <- function(aggregation = NULL, date_from = NULL, date_to = NULL,
+                                  store, united_application_id, country, signature, accept = "text/csv") {
   history_united_app <- GET("https://api.appmagic.rocks/v1/history/united-application",
                             query = list(aggregation = aggregation,
                                          date_from = date_from,
@@ -22,7 +24,7 @@ am_history_united_app <- function(aggregation = NULL, date_from = NULL, date_to 
                                          country = country),
                             add_headers("Authorization" = signature,
                                         "Accept-Encoding" = "gzip",
-                                        "Accept" = "text/csv"))
+                                        "Accept" = accept))
 
   if (history_united_app$status_code != 200) {
     stop(paste0("Error code ", history_united_app$status_code, ": ", content(history_united_app)$message))
